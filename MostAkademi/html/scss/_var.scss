@@ -1,0 +1,196 @@
+
+/*-------------------------------------------------
+ =  Table of Css
+
+ 1.Some default basic style of template
+ 2.Header
+ 3.Isotope filtering
+ 4.General
+ 5.Slider
+ 6.feature section
+ 7.Collection section
+ 8.Countdown section
+ 9.popular courses section
+ 10.course-post
+ 11.Events
+ 12.events-posts
+ 13.video-post
+ 14.News sections
+ 15.blog post
+ 16.testimonial section
+ 17.Sidebar
+ 18.single post
+ 19.teachers section
+ 20.about section
+ 21.portfolio section
+ 22.pricing section
+ 23.single event section
+ 24.single course section
+ 25.cart section
+ 26.Contact
+ 27.Footer
+-------------------------------------------------*/
+
+//the default font in our template
+$font-default: 'Raleway', sans-serif;
+
+//default color skin
+$primary-color: #2e3e77;
+
+//primary color skin2
+$primary-color2: #f9a134;
+
+//primary color skin3
+$primary-color3: #4783f3;
+
+//text color 1 (some titles)
+$title-color: #2f2f32;
+
+//text color 1 (some titles)
+$text-color: #7d7e7f;
+
+
+body {
+    font-family: $font-default;
+}
+
+//reset element paddings and margins
+.reset-elem {
+    margin: 0;
+    padding: 0;
+}
+
+//default style for paragraphs in this template
+p, .paragraph {
+    font-size: 15px;
+    color: $text-color;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 10px;
+}
+
+//default style for hading1 in this template
+h1, .heading1 {
+    color: $title-color;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 48px;
+    margin: 0 0 20px;
+}
+
+//default style for hading2 in this template
+h2, .heading2 {
+    color: $title-color;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 15px;
+    line-height: 26px;
+}
+
+//default style for hading2 in this template
+h3, .heading3 {
+    color: $title-color;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 14px;
+    line-height: 28px;
+}
+
+//variable for radius corners
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-bottom-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-bottom-left-radius: $radius;
+    -o-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-bottom-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-bottom-right-radius: $radius;
+    -o-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-top-left-radius($radius) {
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    -o-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-top-right-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    -o-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+//variable for transitions
+@mixin transition($speed) {
+    transition: all $speed ease-in-out;
+    -moz-transition: all $speed ease-in-out;
+    -webkit-transition: all $speed ease-in-out;
+    -o-transition: all $speed ease-in-out;
+}
+
+//variable for tranform grow elem scale
+@mixin transform($scale) {
+    transform: scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -o-transform: scale($scale);
+}
+
+//box shadow  variable
+@mixin box-shadow($val) {
+    box-shadow: $val;
+    -webkit-box-shadow: $val;
+    -moz-box-shadow: $val;
+    -o-box-shadow: $val;
+}
+
+//animate transform rotate variable
+@mixin rotate($rotate) {
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+//animate transform scale & rotate variable
+@mixin rotate-scale($rotate, $scale) {
+    -webkit-transform: rotate($rotate) scale($scale);
+    -moz-transform: rotate($rotate) scale($scale);
+    -ms-transform: rotate($rotate) scale($scale);
+    -o-transform: rotate($rotate) scale($scale);
+    transform: rotate($rotate) scale($scale);
+}
+
+//background size cover
+.back-cover {
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}
+
+//default style for anchors in this template
+a, .anchor {
+    display: inline-block;
+    text-decoration: none !important;
+
+    @include transition(0.2s);
+}
+

@@ -1,0 +1,123 @@
+
+
+/*------------------------------------------------- */
+/* =  Slider */
+/*------------------------------------------------- */
+
+.boxedcontainer {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0px 30px;
+}
+
+.tp-banner-container {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.tp-banner {
+    width: 100%;
+    position: relative;
+}
+
+.tp-banner-fullscreen-container {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+#home-section {
+    height: 600px;
+    background-color: #343434;
+    overflow: hidden;
+    background: #111111;
+    .tp-shapewrapper {
+        @include border-radius(6px);
+    }
+    .tp-line-shape {
+        background-color: $primary-color2;
+    }
+    .Woo-PriceLarge {
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+        background-color: $primary-color2;
+        font-size: 24px;
+        line-height: 24px;
+        font-family: $font-default;
+        font-weight: 400;
+        transform: rotate(-45deg) !important;
+    }
+    .tp-caption.Woo-TitleLarge {
+        font-size: 41px;
+        line-height: 48px;
+        font-family: $font-default;
+        font-weight: 300 !important;
+        color: rgb(47, 47, 50);
+    }
+    .tp-caption.Woo-Rating {
+        font-family: $font-default;
+        font-style: normal !important;
+        font-size: 17px !important;
+        font-weight: 400 !important;
+        color: $text-color;
+    }
+    .persephone .tp-bullet {
+        width: 30px;
+        height: 3px;
+        background: rgba(255,255,255,0.5);
+        border: none;
+    }
+    .persephone .tp-bullet:hover, .persephone .tp-bullet.selected {
+        background: #fff;
+    }
+    a.rev-btn {
+        z-index: 9;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+        letter-spacing: 0px;
+        font-family: Raleway;
+        background-color: $primary-color3;
+        @include border-radius(3px);
+        outline: none;
+        box-sizing: border-box;
+        cursor: pointer;
+        @include box-shadow(rgba(0, 0, 0, 0.098) 0px -3px 0px 0px inset);
+        visibility: inherit;
+        transition: none 0s ease 0s;
+        text-align: inherit;
+        margin: 0px;
+        padding: 12px 25px 13px;
+        min-height: 0px;
+        min-width: 0px;
+        max-height: none;
+        max-width: none;
+        border: none;
+        opacity: 1;
+        transform-origin: 50% 50% 0px;
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        &:hover {
+            background-color: $primary-color3 !important;
+            color: #fff !important;
+            opacity: 0.7 !important;
+        }
+    }
+    .tparrows {
+        background-color: $primary-color;
+        color: #fff;
+        @include border-radius(3px);
+    }
+}
+
+@media (max-width: 991px) {
+    #home-section {
+        height: auto;
+    }
+    .tp-caption {
+        display: none !important;
+    }
+}

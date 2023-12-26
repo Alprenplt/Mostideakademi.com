@@ -1,0 +1,83 @@
+
+/*------------------------------------------------- */
+/* =  Collection section */
+/*------------------------------------------------- */
+
+section.collection-section {
+	padding: 80px 0;
+	.collection-box {
+		.collection-post {
+			margin-bottom: 30px;
+			@include border-radius(5px);
+			overflow: hidden;
+			position: relative;
+			.inner-collection {
+				position: relative;
+			}
+			img {
+				@include border-radius(5px);
+				margin-top: -7px;
+				width: 105%;
+				height: auto;
+				margin-left: -5%;
+				@include transition(0.2s);
+			}
+			&:first-child {
+				img {
+					margin-top: 0;
+				}
+			}
+			a.hover-post {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				color: #fff;
+				text-align: center;
+				padding: 20px 10px 20px;
+				@include transition(0.2s);
+				background: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.8)),to(transparent));
+				background: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 100%);
+				z-index: 2;
+				span {
+					display: block;
+					@include transition(0.2s);
+					&.title {
+						font-size: 18px;
+						font-weight: 500;
+						margin-bottom: 40px;
+					}
+					&.numb-courses {
+						margin-bottom: -60px;
+					}
+				}
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background-color: transparent;
+				@include transition(0.2s);
+			}
+			&:hover {
+				&:after {
+					background-color: rgba(0,0,0,0.2);
+				}
+				img {
+					margin-left: 0;
+				}
+				a.hover-post {
+					span.title {
+						margin-bottom: 4px;
+					}
+					span.numb-courses {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

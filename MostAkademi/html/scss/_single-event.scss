@@ -1,0 +1,139 @@
+
+/*------------------------------------------------- */
+/* =  single event section */
+/*------------------------------------------------- */
+
+section.single-event-section {
+	padding: 40px 0;
+	background-color: #f8f9fa;
+	.single-event-box {
+		img {
+			width: 100%;
+			height: auto;
+		}
+		.event-meta-info {
+			background-color: #343a40;
+			color: #fff;
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 30px;
+			.box-content {
+				position: relative;
+				width: 100%;
+				min-height: 1px;
+				display: flex;
+				padding-left: 0;
+				padding-right: 0;
+				flex: 0 0 33.33333%;
+				max-width: 33.33333%;
+			}
+			.inner {
+				position: relative;
+				display: flex;
+				flex: 1;
+				justify-content: space-between;
+				padding: 1.75rem;
+				font-size: .875rem;
+				align-items: center;
+				z-index: 3;
+				span {
+					display: block;
+					margin-bottom: 4px;
+					color: rgba(255,255,255,.6);
+				}
+				p {
+					margin-bottom: 0;
+					color: #fff;
+					line-height: 26px;
+				}
+				.icon {
+					margin-left: 20px;
+					color: #f9a134;
+					font-size: 34px;
+				}
+				&:before {
+					content: '';
+					background-color: transparent;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: -1;
+				}
+			}
+
+			div.end-time .inner:before {
+				background-color: rgba(0,0,0,0.1);
+			}
+			div.address .inner:before {
+				background-color: rgba(0,0,0,0.2);
+			}
+		}
+		.event-content {
+			background-color: #fff;
+			padding: 30px;
+			border: 1px solid #e5e5e5;
+			@include border-radius(4px);
+			h1 {
+				font-size: 22px;
+				margin-bottom: 20px;
+				line-height: 32px;
+			}
+			p {
+				line-height: 28px;
+				margin-bottom: 30px;
+			}
+			ul {
+				@extend .reset-elem;
+				padding-left: 20px;
+				margin-bottom: 30px;
+				li {
+					color: $text-color;
+					line-height: 28px;
+					font-size: 15px;
+				}
+			}
+			ul.share-list {
+				@extend .reset-elem;
+				margin-top: 30px;
+				padding-top: 30px;
+				border-top: 1px solid #e5e5e5;
+				text-align: center;
+				li {
+					display: inline-block;
+					margin: 0 2px;
+					a {
+						width: 36px;
+						height: 36px;
+						display: flex;
+						color: rgba(0,0,0,.6);
+						align-items: center;
+						justify-content: center;
+						border: 1px solid #e5e5e5;
+						@include border-radius(50%);
+						&:hover {
+							border-color: transparent;
+							color: #fff;
+						}
+						&.facebook:hover {
+							background: #7073e5;
+						}
+						&.google:hover {
+							background: #e6545f;
+						}
+						&.linkedin:hover {
+							background: #0077b5;
+						}
+						&.twitter:hover {
+							background: #63bde3;
+						}
+					}
+				}
+			}
+		}
+		#map {
+			height: 280px;
+		}
+	}
+}

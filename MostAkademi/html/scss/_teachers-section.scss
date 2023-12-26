@@ -1,0 +1,235 @@
+
+/*------------------------------------------------- */
+/* =  teachers section */
+/*------------------------------------------------- */
+
+section.teachers-section {
+	padding: 40px 0;
+	background-color: #f8f9fa;
+	.profile-image {
+		@include border-radius(4px);
+		margin-bottom: 40px;
+		overflow: hidden;
+		.image-holder {
+			max-height: 490px;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		
+		ul.social-links {
+			background-color: #fff;
+			padding: 15px 20px;
+			text-align: center;
+			border: 1px solid #e5e5e5;
+			border-bottom-right-radius: 4px;
+			border-bottom-left-radius: 4px;
+			margin: 0;
+			li {
+				display: inline-block;
+				margin: 0 2px;
+				a {
+    				width: 36px;
+					height: 36px;
+					display: flex;
+					color: rgba(0,0,0,.6);
+					align-items: center;
+					justify-content: center;
+					border: 1px solid #e5e5e5;
+					@include border-radius(50%);
+					&:hover {
+						border-color: transparent;
+						color: #fff;
+					}
+					&.facebook:hover {
+						background: #7073e5;
+					}
+					&.google:hover {
+						background: #e6545f;
+					}
+					&.linkedin:hover {
+						background: #0077b5;
+					}
+					&.twitter:hover {
+						background: #63bde3;
+					}
+    			}
+			}
+		}
+	}
+	.profile-details {
+		background-color: #fff;
+		padding: 30px;
+		border: 1px solid #e5e5e5;
+		@include border-radius(4px);
+		p {
+			margin-bottom: 30px;
+		}
+		.line-details {
+			padding: 30px 0;
+			border-top: 1px solid #ebebeb;
+		}
+		.detail-item {
+			display: flex;
+			i {
+				width: 56px;
+				height: 56px;
+				font-size: 24px;
+				text-align: center;
+				line-height: 54px;
+				color: $primary-color3;
+				@include border-radius(50%);
+				border: 1px solid #e6e6e6;
+				margin-right: 24px;
+			}
+			h2 {
+				font-size: 16px;
+				font-weight: 500;
+				margin-bottom: 0;
+			}
+			span, a {
+				font-size: 14px;
+				color: #464749;
+			}
+			a:hover {
+				color: $primary-color3;
+			}
+		}
+	}
+	.teacher-content {
+		background-color: #fff;
+		padding: 30px;
+		border: 1px solid #e5e5e5;
+		@include border-radius(4px);
+		p {
+			margin-bottom: 30px;
+		}
+		.skills-box {
+			.skill-line {
+				background: #f7f7f7;
+				position: relative;
+				box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+				@include border-radius(3px);
+				margin-bottom: 15px;
+				overflow: hidden;
+				span.fill-text {
+					display: inline-block;
+					color: #fff;
+					padding: .5em 1em;
+					text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+					font-size: 14px;
+					position: relative;
+					line-height: 26px;
+					z-index: 2;
+				}
+				span.fill-box {
+					background-color: #4cadc9;
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+				}
+			}
+		}
+		form.contact-form {
+			input, textarea {
+				display: block;
+				width: 100%;
+				margin-bottom: 20px;
+				border: 1px solid #dcdcdc;
+				line-height: 1.6;
+				outline: 0;
+				padding: 8px 10px;
+				box-shadow: 0 1px 3px 0 rgba(0,0,0,.06);
+				@include border-radius(2px);
+				@include transition(0.2s);
+				font-size: 14px;
+			}
+			textarea {
+				height: 100px;
+			}
+			button {
+				color: #fff;
+			    text-align: center;
+			    border: 0;
+			    padding: 11px 22px;
+			    vertical-align: bottom;
+			    font-weight: 400;
+			    font-size: 16px;
+			    text-shadow: none;
+			    display: inline-block;
+			    background-color: $primary-color2;
+			    @include border-radius(50px);
+			    @include transition(0.2s);
+			    cursor: pointer;
+			    &:hover {
+			    	opacity: 0.86;
+			    }
+			}
+		}
+	}
+}
+
+.teacher-post {
+	position: relative;
+	@include border-radius(4px);
+	overflow: hidden;
+	margin-bottom: 30px;
+	@include transition(0.2s);
+	&:hover {
+		@include box-shadow(0 15px 20px #cacaca);
+	}
+	a {
+		position: relative;
+		display: block;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: transparent;
+			@include transition(0.2s);
+		}
+		&:hover:before {
+			background-color: rgba(0,0,0,0.3);
+		}
+	}
+	img {
+		width: 100%;
+		height: auto;
+		@include border-radius(4px);
+	}
+	.hover-post {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		color: #fff;
+		padding: 20px;
+		@include transition(0.2s);
+		background: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.8)),to(transparent));
+		background: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 100%);
+		z-index: 2;
+		h2 {
+			color: #fff;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+		span {
+			color: #fff;
+			margin-bottom: 0px;
+			margin-top: 7px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	section.teachers-section .profile-details .detail-item {
+		margin-bottom: 10px;
+	}
+}
+

@@ -1,0 +1,133 @@
+
+/*------------------------------------------------- */
+/* =  about section */
+/*------------------------------------------------- */
+
+section.about-section {
+	padding: 40px 0;
+	background-color: #f8f9fa;
+}
+
+.about-article {
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 30px;
+		@include border-radius(4px);
+	}
+	.article-content {
+		margin-bottom: 30px;
+		@include border-radius(4px);
+		background-color: #fff;
+		padding: 50px;
+		border: 1px solid #e5e5e5;
+		&.right-align {
+			text-align: right;
+		}
+		i {
+			font-size: 30px;
+    		color: #f9a134;
+    		margin-bottom: 30px;
+		}
+		h2 {
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 20px;
+			line-height: 26px;
+		}
+	}
+}
+
+section.statistic-section {
+	padding: 50px 0;
+	background-color: $primary-color3;
+	.statistic-post {
+		display: flex;
+		span {
+			color: #fff;
+			font-size: 48px;
+		    font-weight: 300;
+		    margin-right: 15px;
+		    line-height: 48px;
+		}
+		p {
+			color: #fff;
+		}
+	}
+}
+
+section.clients-section {
+	padding: 40px 0;
+	background-color: #f8f9fa;
+	h1 {
+		font-size: 24px;
+		margin-bottom: 0px;
+	}
+	p {
+		margin-bottom: 30px;
+	}
+	ul.clients-list {
+		@extend .reset-elem;
+		overflow: hidden;
+		margin-bottom: 20px;
+		li {
+			width: 20%;
+			float: left;
+			list-style: none;
+			position: relative;
+			border: 1px solid #e5e5e5;
+			margin-right: -1px;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				&:hover {
+					opacity: 1;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-color: $primary-color3;
+					opacity: 0.86;
+				}
+				span {
+					position: relative;
+					color: #fff;
+					z-index: 2;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 640px) {
+	section.statistic-section {
+		padding-bottom: 20px;
+	}
+	section.statistic-section .statistic-post {
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	section.clients-section ul.clients-list li {
+		width: 50%;
+		margin-bottom: -1px;
+	}
+}

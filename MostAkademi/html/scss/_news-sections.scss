@@ -1,0 +1,35 @@
+
+/*------------------------------------------------- */
+/* =  News sections */
+/*------------------------------------------------- */
+
+section.news-section {
+	padding: 80px 0;
+}
+
+section.blog-section {
+	padding: 40px 0;
+	background-color: #f8f9fa;
+	ul.page-pagination {
+		@extend .reset-elem;
+		margin-bottom: 40px;
+		li {
+			display: inline-block;
+			margin-right: 8px;
+			a {
+				color: #464749;
+				width: 40px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				background-color: #f0f0f1;
+				@include border-radius(50%);
+				&:hover,
+				&.active {
+					color: #fff;
+					background-color: $primary-color2;
+				}
+			}
+		}
+	}
+}
